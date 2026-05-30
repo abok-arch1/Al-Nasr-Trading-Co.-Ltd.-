@@ -240,7 +240,7 @@
 
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursorRing"></div>
-<a class="wa-float" href="https://wa.me/249XXXXXXXXX" target="_blank">💬</a>
+<a class="wa-float" href="https://wa.me/249993212538" target="_blank">💬</a>
 
 <nav id="navbar">
   <a href="#" class="logo">
@@ -287,7 +287,6 @@
   <div class="hero-content">
     <div class="hero-badge"><span></span> بورتسودان – السوق الكبير، عمارة غريب</div>
     
-    <!-- 30 MINUTE COUNTDOWN TIMER -->
     <div class="timer-container">
       <div class="timer-text">⏳ ينتهي عرض التقسيط المباشر خلال:</div>
       <div class="timer-digits" id="countdown-timer">30:00</div>
@@ -318,7 +317,6 @@
 
     <div class="comp-card reveal">
       <div class="comp-img-wrap">
-        <!-- المسار المحلي المحدث لألواح جينكو -->
         <img src="jinko-panels.jpg" alt="ألواح جينكو سولار N-Type" loading="lazy" />
         <div class="comp-img-overlay"></div>
       </div>
@@ -339,7 +337,6 @@
 
     <div class="comp-card reveal" style="transition-delay:.1s">
       <div class="comp-img-wrap">
-        <!-- المسار المحلي المحدث لبطاريات MUST -->
         <img src="must-battery.jpg" alt="بطاريات ليثيوم MUST" loading="lazy" />
         <div class="comp-img-overlay"></div>
       </div>
@@ -360,7 +357,6 @@
 
     <div class="comp-card reveal" style="transition-delay:.2s">
       <div class="comp-img-wrap">
-        <!-- المسار المحلي المحدث لإنفرتر هايبرد MUST -->
         <img src="must-inverter.jpg" alt="الانفرتر الهجين MUST" loading="lazy" />
         <div class="comp-img-overlay"></div>
       </div>
@@ -381,7 +377,6 @@
 
     <div class="comp-card reveal" style="transition-delay:.3s">
       <div class="comp-img-wrap">
-        <!-- المسار المحلي المحدث لمنظم الشحن -->
         <img src="mppt-controller.jpg" alt="منظم شحن MPPT" loading="lazy" />
         <div class="comp-img-overlay"></div>
       </div>
@@ -395,14 +390,13 @@
           <span class="comp-spec">كفاءة ٩٩٪</span>
           <span class="comp-spec">شاشة LCD</span>
           <span class="comp-spec">حماية متعددة</span>
-          <span class="comp-spec">٤٠–١٠٠ أمبير</span>
+          <span class="comp-spec">٤٠–١٠0 أمبير</span>
         </div>
       </div>
     </div>
 
     <div class="comp-card reveal" style="transition-delay:.4s">
       <div class="comp-img-wrap">
-        <!-- المسار المحلي المحدث لهياكل التركيب -->
         <img src="mounting-structures.jpg" alt="هياكل تركيب الألواح الشمسية" loading="lazy" />
         <div class="comp-img-overlay"></div>
       </div>
@@ -423,7 +417,6 @@
 
     <div class="comp-card reveal" style="transition-delay:.5s">
       <div class="comp-img-wrap">
-        <!-- المسار المحلي المحدث لنظام المراقبة الذكي -->
         <img src="smart-monitoring.jpg" alt="نظام المراقبة الذكي" loading="lazy" />
         <div class="comp-img-overlay"></div>
       </div>
@@ -568,7 +561,6 @@
 <section id="why">
   <div class="why-grid">
     <div class="why-visual reveal">
-      <!-- المسار المحلي المحدث للصورة التسويقية للموقع المعرض -->
       <img src="why-nasr.jpg" alt="لماذا النصر لتجارة الطاقة الشمسية" loading="lazy" />
       <div class="why-visual-overlay"></div>
       <div class="why-visual-badge">
@@ -692,32 +684,32 @@
       </div>
       <div class="contact-item">
         <div class="contact-icon">📞</div>
-        <div><h4>الهاتف</h4><p><a href="tel:+249XXXXXXXXX">+249 XX XXX XXXX</a></p></div>
+        <div><h4>الهاتف</h4><p><a href="tel:+249993212538">+249 99 321 2538</a></p></div>
       </div>
       <div class="contact-item">
         <div class="contact-icon">💬</div>
-        <div><h4>واتساب</h4><p><a href="https://wa.me/249XXXXXXXXX">تواصل عبر واتساب</a></p></div>
+        <div><h4>واتساب</h4><p><a href="https://wa.me/249993212538">تواصل عبر واتساب</a></p></div>
       </div>
     </div>
     <div class="reveal" style="transition-delay:.1s">
-      <div class="form-grid">
+      <form class="form-grid" onsubmit="handleSubmit(event)">
         <div class="form-row">
-          <div class="form-field"><label>الاسم الكامل</label><input type="text" placeholder="محمد أحمد" /></div>
-          <div class="form-field"><label>رقم الهاتف</label><input type="tel" placeholder="+249 XX XXX XXXX" /></div>
+          <div class="form-field"><label>الاسم الكامل</label><input type="text" id="custName" placeholder="محمد أحمد" required /></div>
+          <div class="form-field"><label>رقم الواتساب</label><input type="tel" id="custPhone" placeholder="أدخل رقم الواتساب (مثال: +249...)" required /></div>
         </div>
         <div class="form-field">
           <label>الباقة المهتم بها</label>
-          <select>
+          <select id="custPackage" required>
             <option value="">اختر الباقة...</option>
-            <option>الباقة الاقتصادية (١ كيلوواط)</option>
-            <option>الباقة المنزلية المميزة (٥ كيلوواط)</option>
-            <option>باقة محل السوق الكبير (٥ كيلوواط)</option>
+            <option value="الباقة الاقتصادية (١ كيلوواط)">الباقة الاقتصادية (١ كيلوواط)</option>
+            <option value="الباقة المنزلية المميزة (٥ كيلوواط)">الباقة المنزلية المميزة (٥ كيلوواط)</option>
+            <option value="باقة محل السوق الكبير (٥ كيلوواط)">باقة محل السوق الكبير (٥ كيلوواط)</option>
           </select>
         </div>
-        <div class="form-field"><label>المنطقة / الحي</label><input type="text" placeholder="حيك في بورتسودان" /></div>
-        <div class="form-field"><label>رسالتك (اختياري)</label><textarea placeholder="أي تفاصيل إضافية..."></textarea></div>
-        <div><button class="btn-primary" style="width:100%" onclick="handleSubmit(event)">إرسال الطلب ⚡</button></div>
-      </div>
+        <div class="form-field"><label>المنطقة / الحي</label><input type="text" id="custArea" placeholder="حيك في بورتسودان" required /></div>
+        <div class="form-field"><label>رسالتك (اختياري)</label><textarea id="custMsg" placeholder="أي تفاصيل إضافية..."></textarea></div>
+        <div><button type="submit" id="submitBtn" class="btn-primary" style="width:100%">إرسال الطلب ⚡</button></div>
+      </form>
     </div>
   </div>
 </section>
@@ -844,13 +836,77 @@
   }
   window.addEventListener('DOMContentLoaded', startCountdown);
 
-  /* Contact Form Submission Treatment */
-  function handleSubmit(e){
+  /* Contact Form Submission to Telegram Bot */
+  async function handleSubmit(e) {
     e.preventDefault();
-    const b = e.target;
-    b.textContent = '✅ تم إرسال طلبك! سنتواصل معك قريباً';
-    b.style.background = 'linear-gradient(135deg,#27ae60,#2ecc71)';
-    setTimeout(() => { b.textContent = 'إرسال الطلب ⚡'; b.style.background = ''; }, 4000);
+    
+    // الحصول على الزر والمتغيرات
+    const btn = document.getElementById('submitBtn');
+    const name = document.getElementById('custName').value;
+    const phone = document.getElementById('custPhone').value;
+    const packageSelected = document.getElementById('custPackage').value;
+    const area = document.getElementById('custArea').value;
+    const msg = document.getElementById('custMsg').value;
+
+    // تغيير حالة الزر
+    const originalText = btn.textContent;
+    btn.textContent = 'جاري الإرسال... ⏳';
+    btn.disabled = true;
+
+    // إعداد بيانات تليجرام
+    const botToken = '8903879567:AAGorB6-sZaAwohrgAjYGorgn_TmkS8GDEE';
+    const chatId = '8623773122';
+    
+    // تم التعديل هنا لتتوافق الرسالة الواصلة إليك مع اسم الحقل الجديد
+    const text = `
+    🆕 <b>طلب جديد من موقع النصر</b>
+    
+    👤 <b>الاسم:</b> ${name}
+    📞 <b>رقم الواتساب:</b> ${phone}
+    📦 <b>الباقة المهتم بها:</b> ${packageSelected}
+    📍 <b>المنطقة/الحي:</b> ${area}
+    
+    💬 <b>رسالة إضافية:</b>
+    ${msg ? msg : 'لا توجد تفاصيل إضافية.'}
+    `;
+
+    const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
+    
+    try {
+      const response = await fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          chat_id: chatId,
+          text: text,
+          parse_mode: 'HTML'
+        })
+      });
+
+      if (response.ok) {
+        // في حالة النجاح
+        btn.textContent = '✅ تم إرسال طلبك! سنتواصل معك قريباً';
+        btn.style.background = 'linear-gradient(135deg,#27ae60,#2ecc71)';
+        e.target.reset(); // تفريغ الحقول
+      } else {
+        // في حالة الخطأ من الخادم
+        btn.textContent = '❌ حدث خطأ، يرجى المحاولة لاحقاً';
+        btn.style.background = '#e74c3c';
+      }
+    } catch (error) {
+      // في حالة انقطاع الاتصال
+      btn.textContent = '❌ حدث خطأ في الاتصال بالشبكة';
+      btn.style.background = '#e74c3c';
+    }
+
+    // إعادة الزر لشكله الطبيعي بعد 4 ثوانٍ
+    setTimeout(() => {
+      btn.textContent = originalText;
+      btn.style.background = '';
+      btn.disabled = false;
+    }, 4000);
   }
 </script>
 </body>
